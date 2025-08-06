@@ -62,9 +62,24 @@ body {
     border-color: var(--primary-color);
 }
 
-.content-wrapper {
+.content-wrapper,
+.container {
     max-width: var(--content-width);
     margin: 0 auto;
+}
+
+@media(max-width:1200px) {
+    .content-wrapper,
+    .container {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title{
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 .text-primary {
