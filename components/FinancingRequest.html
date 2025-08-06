@@ -1,0 +1,99 @@
+<section class="section-py">
+    <div class="content-wrapper">
+        <h2 class="section-title">طلب تمويل</h2>
+        <form action="">
+            <div class="flex gap-6">
+                <div class="flex-[2] flex flex-col gap-6">
+                    <div class="group">
+                        <label for="email" class="label">بريد إلكتروني</label>
+                        <div class="input-group">
+                            <img src="./assets/svgs/inputEmail.svg" alt="email">
+                            <input type="text" id="email" class="input" placeholder="بريد إلكتروني">
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label for="mobile" class="label">رقم الموبايل</label>
+                        <div class="flex gap-2 w-full items-center">
+                            <div class="input-group w-full">
+                                <input type="text" id="mobile" class="input" placeholder="رقم الموبايل">
+                            </div>
+                            <span dir="ltr"
+                                class="block bg-[#F7F7F7] p-[18px] rounded-2xl flex items-center justify-center gap-2">
+                                <img class="w-[27px] h-[17px]" src="./assets/imgs/saudi-flag.png" alt="phone">
+                                <span class="text-sm font-bold">+966</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="group w-full">
+                            <label for="best-contact" class="label">طريقة الاتصال المفضلة</label>
+                            <div class="input-group w-full">
+                                <select type="text" id="best-contact" class="input">
+                                    <option value="1" selected>رقم الموبايل</option>
+                                    <option value="2">واتساب</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="group w-full">
+                            <label for="name" class="label">الاسم</label>
+                            <div class="input-group w-full">
+                                <img src="./assets/svgs/user.svg" alt="user">
+                                <input type="text" id="best-contact" class="input" placeholder="الاسم">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="group w-full">
+                            <label for="commercial_register_type" class="label">نوع السجل التجاري</label>
+                            <div class="input-group w-full">
+                                <select type="text" id="commercial_register_type" class="input">
+                                    <option value="1" selected>شركة</option>
+                                    <option value="2">شركة</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="group w-full">
+                            <label for="activity" class="label">نوع النشاط</label>
+                            <div class="input-group w-full">
+                                <select type="text" id="activity" class="input">
+                                    <option value="1" selected>تجاري</option>
+                                    <option value="2">تجاري</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group w-full">
+                        <label for="yearly_income" class="label">الدخل السنوي</label>
+                        <div class="input-group w-full">
+                            <select type="text" id="yearly_income" class="input">
+                                <option value="1" selected>اقل من 5 ملايين ريال سنويا</option>
+                                <option value="2">اكثر من 5 ملايين ريال سنويا</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="button bg-primary text-white w-full p-5 rounded-2xl">
+                        <span>طلب</span>
+                        <img src="./assets/svgs/send.svg" alt="arrow-right">
+                    </button>
+                </div>
+                <div class="flex-1 flex flex-col gap-6 md:mt-12">
+                    <div class="flex gap-2 items-center py-6 px-3 rounded-2xl bg-[var(--gray-color)]">
+                        <img src="./assets/svgs/financingRequestEmail.svg" alt="">
+                        <div class="flex flex-col font-bold gap-2">
+                            <span class="text-xl">بريد إلكتروني</span>
+                            <span class="text-neutral-700">info@sahem-financial.com</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center py-6 px-3 rounded-2xl bg-[var(--gray-color)]">
+                        <img src="./assets/svgs/circularLocation.svg" alt="">
+                        <div class="flex flex-col font-bold gap-2">
+                            <span class="text-xl">العنوان</span>
+                            <span class="text-neutral-700">السعودية - الرياض</span>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl h-[288px]" id="map"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

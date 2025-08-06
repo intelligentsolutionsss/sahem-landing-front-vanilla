@@ -1,0 +1,95 @@
+<header class="home-header min-h-screen flex justify-center items-center relative">
+    <!-- nav -->
+    <div
+        class="nav flex items-center justify-between max-w-[var(--content-width)] p-4 mx-auto rounded-lg bg-[#FFFFFF80] backdrop-blur-md fixed top-4 left-0 right-0 z-[1000] shadow-md">
+        <img class="h-12" src="./assets/imgs/main-logo.png" alt="logo" />
+        <ul class="gap-2 hidden lg:flex">
+            <li>
+                <a class="font-bold py-4 px-6" href="#">الصفحة الرئيسية</a>
+            </li>
+            <li>
+                <a class="font-bold py-4 px-6" href="#">من نحن</a>
+            </li>
+            <li>
+                <a class="font-bold py-4 px-6" href="#">تواصل معنا</a>
+            </li>
+            <li>
+                <a class="font-bold py-4 px-6" href="#">الأسئلة الشائعة</a>
+            </li>
+        </ul>
+        <div class="flex gap-2">
+            <button type="button"
+                class="flex gap-2 items-center py-2.5 px-5 text-sm font-semibold text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200">
+                <span>English</span>
+                <img src="./assets/svgs/locale.svg" alt="locale" />
+            </button>
+            <!-- <button type="button"
+                class="flex gap-2 items-center text-white bg-[#2854DB] font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+                <span>دخول</span>
+                <img src="./assets/imgs/arrow-down.svg" alt="arrow-down" />
+            </button> -->
+        </div>
+    </div>
+    <!-- center content -->
+    <div class="welcome-content flex flex-col gap-4 items-center justify-center">
+        <h2 class="text-4xl font-bold title-gradient-text pb-4">استثمار عقاري للجميع</h2>
+        <p class="text-xl mb-4">استثمر في العقار مع ساهم بسهولة …  بدون رأس مال كبير أو خبرة.</p>
+        <div class="flex gap-2">
+            <button type="button"
+                class="flex gap-2 items-center text-white bg-[#2854DB] font-semibold rounded-lg text-xl px-4 py-3 focus:outline-none">
+                <span>ابدأ الأن</span>
+                <img src="./assets/svgs/arrow-down.svg" alt="arrow-down" />
+            </button>
+            <button type="button"
+                class="flex gap-3 items-center py-2 px-6 text-xl font-semibold text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200">
+                <span class="hidden sm:block">تحميل التطبيق</span>
+                <span class="w-8 h-8 bg-white rounded-lg shadow-md flex items-center justify-center">
+                    <img src="./assets/svgs/apple.svg" alt="apple" />
+                </span>
+                <span class="w-8 h-8 bg-white rounded-lg shadow-md flex items-center justify-center">
+                    <img src="./assets/svgs/googlePlay.svg" alt="playstore" />
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="analytics hidden 2xl:flex items-end absolute bottom-20 right-20 z-10">
+        <div class="w-[300px] h-[300px] bg-[#FFFFFF69] rounded-xl flex flex-col gap-4 items-center pt-20">
+            <img src="./assets/svgs/bagMoney.svg" alt="bag-money" />
+            <div class="flex flex-col items-center gap-1">
+                <h3 class="text-3xl font-bold">20,232,000</h3>
+                <span class="flex gap-2" dir="ltr">
+                    <span class="font-bold text-[#14AE5C]">220%</span>
+                    <img src="./assets/svgs/arrowUpChart.svg" alt="arrow-up-chart" />
+                </span>
+            </div>
+        </div>
+        <div
+            class="w-[177px] h-[177px] bg-[#FFFFFF69] rounded-xl translate-x-[40%] translate-y-[15%] flex flex-col gap-4 items-center pt-12">
+            <img src="./assets/svgs/saveMoney.svg" alt="">
+            <div class="flex flex-col items-center">
+                <span class="font-semibold text-[#5D5D5D]">توفير لأموالك</span>
+                <h3 class="text-3xl font-bold">500k</h3>
+            </div>
+        </div>
+    </div>
+    <div class="header-footer absolute xl:w-[var(--content-width)] bottom-20 mx-auto flex flex-row-reverse">
+        <!-- user counts -->
+        <div
+            class="w-[fit-content] users-count flex gap-2 px-3 py-2 rounded-3xl bg-[#FFFFFF33] text-white items-center">
+            <span class="font-bold">
+                <span>مستخدم الأن</span>
+                <span>+2k</span>
+            </span>
+            <div class="user-imgs flex">
+                <img class="relative z-30 -me-4" src="./assets/imgs/user-1.png" alt="user-1" />
+                <img class="relative z-20 -me-4" src="./assets/imgs/user-2.png" alt="user-2" />
+                <img class="relative z-10" src="./assets/imgs/user-3.png" alt="user-3" />
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    .home-header {
+        background: linear-gradient(180deg, #FAFAFA 34.04%, rgba(37, 89, 249, 0.98) 115.65%)
+    }
+</style>
