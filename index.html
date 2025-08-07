@@ -16,12 +16,12 @@
     <div id="app" dir="rtl"></div>
     <script>
         const components = [
+            './components/Header.html',
             './components/HomeHeader.html',
             './components/WithSahem.html',
             './components/InvestmentJourney.html',
             './components/DownloadApp.html',
             './components/LatestCompletedProjects.html',
-            './components/FinancingRequest.html',
             './components/Faqs.html',
             './components/BoardOfDirectors.html',
             './components/Footer.html',
@@ -36,52 +36,6 @@
         }
 
         loadComponents();
-    </script>
-
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatxAltC9j9-GCwPm8NGczsm-0Iq7m8Qo&language=ar&libraries=marker"
-        async defer></script>
-    <script>
-        let map, marker;
-
-        async function initMap() {
-            const position = { lat: 30.033333, lng: 31.233334 };
-            const { Map } = await google.maps.importLibrary("maps");
-            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-            map = new Map(document.querySelector('#map'), {
-                zoom: 19,
-                center: position,
-                mapId: '207951bcb5114fa9c433eefc',
-            });
-
-            marker = new AdvancedMarkerElement({
-                map: map,
-                position: position,
-                title: "Cairo",
-            });
-
-
-            const geocoder = new google.maps.Geocoder();
-            map.addListener("click", (e) => {
-                const lat = e.latLng.lat();
-                const lng = e.latLng.lng();
-                const latLng = { lat, lng };
-
-                geocoder.geocode({ location: latLng }, (results, status) => {
-                    if (status === "OK" && results.length) {
-                        emit('select', {
-                            address: results[0].formatted_address,
-                            ...latLng
-                        })
-                    }
-                });
-
-                map.setZoom(18);
-                map.setCenter(latLng);
-                marker.position = e.latLng
-            });
-        }
     </script>
 </body>
 
