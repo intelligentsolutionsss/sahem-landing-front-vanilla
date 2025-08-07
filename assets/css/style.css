@@ -7,8 +7,13 @@
     --neutral-color-700: #4D4D4D;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Cairo', sans-serif;
+    scroll-margin-top: 100px;
 }
 
 body {
@@ -69,6 +74,7 @@ body {
 }
 
 @media(max-width:1200px) {
+
     .content-wrapper,
     .container {
         margin: 0 20px;
@@ -76,7 +82,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .section-title{
+    .section-title {
         font-size: 20px;
         text-align: center;
     }
@@ -130,6 +136,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.nav-item.active{
+.nav-item.active {
     color: var(--primary-color)
 }
