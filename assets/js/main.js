@@ -11,7 +11,7 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener('componentsLoaded', () => {
-    const {href} = window.location;
+    const { href } = window.location;
     document.querySelectorAll('.nav-item').forEach(item => {
         if (href == item.querySelector('a').href) {
             item.classList.add('active');
