@@ -139,3 +139,45 @@ body {
 .nav-item.active {
     color: var(--primary-color)
 }
+
+.overlay {
+    z-index: 10000;
+}
+
+.sidebar {
+    z-index: 10001;
+}
+
+.sidebar .nav-item{
+    border: 1px solid var(--gray-color);
+}
+
+.sidebar .nav-item.active{
+    border: 1px solid var(--primary-color-100);
+    background-color: var(--primary-color-100);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar:not(.open) {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
