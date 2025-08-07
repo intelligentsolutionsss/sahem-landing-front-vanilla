@@ -129,3 +129,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.nav-item.active{
+    color: var(--primary-color)
+}

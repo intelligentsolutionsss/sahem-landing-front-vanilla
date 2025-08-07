@@ -32,11 +32,12 @@
                 const html = await res.text();
                 document.getElementById('app').innerHTML += html;
             }
-            initMap();
+            document.dispatchEvent(new Event('componentsLoaded'));
         }
 
         loadComponents();
     </script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

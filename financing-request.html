@@ -14,26 +14,8 @@
 
 <body>
     <div id="app" dir="rtl" class="mt-8"></div>
-    <script>
-        const components = [
-            './components/Header.html',
-            './components/FinancingRequest.html',
-            './components/Footer.html',
-        ];
-        const loadComponents = async () => {
-            for (const component of components) {
-                const res = await fetch(component);
-                const html = await res.text();
-                document.getElementById('app').innerHTML += html;
-            }
-            initMap();
-        }
-
-        loadComponents();
-    </script>
-
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatxAltC9j9-GCwPm8NGczsm-0Iq7m8Qo&language=ar&libraries=marker"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatxAltC9j9-GCwPm8NGczsm-0Iq7m8Qo&language=ar&libraries=marker&loading=async"
         async defer></script>
     <script>
         let map, marker;
@@ -77,6 +59,30 @@
             });
         }
     </script>
+    <script>
+        const components = [
+            './components/Header.html',
+            './components/FinancingRequest.html',
+            './components/Footer.html',
+        ];
+        const loadComponents = async () => {
+            for (const component of components) {
+                const res = await fetch(component);
+                const html = await res.text();
+                document.getElementById('app').innerHTML += html;
+            }
+            document.dispatchEvent(new Event('componentsLoaded'));
+        }
+        loadComponents();
+
+        document.addEventListener('componentsLoaded', () => {
+            const timeout = setTimeout(() => {
+                initMap();
+                clearTimeout(timeout);
+            },100)
+        })
+    </script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
